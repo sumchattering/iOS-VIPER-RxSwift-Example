@@ -11,8 +11,8 @@
 		2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3322242A440077AD51 /* AppDelegate.swift */; };
 		2D8C3B3B22242A450077AD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3A22242A450077AD51 /* Assets.xcassets */; };
 		2D8C3B3E22242A450077AD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3C22242A450077AD51 /* LaunchScreen.storyboard */; };
-		2D8C3B4922242A460077AD51 /* CoolRestaurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B4822242A460077AD51 /* CoolRestaurantsTests.swift */; };
-		2D8C3B5422242A460077AD51 /* CoolRestaurantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B5322242A460077AD51 /* CoolRestaurantsUITests.swift */; };
+		2D8C3B4922242A460077AD51 /* RestaurantRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B4822242A460077AD51 /* RestaurantRepositoryTests.swift */; };
+		2D8C3B5422242A460077AD51 /* RestaurantsMapViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B5322242A460077AD51 /* RestaurantsMapViewTest.swift */; };
 		2D8C3B6922242BA20077AD51 /* RestaurantsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B6422242BA20077AD51 /* RestaurantsMapViewController.swift */; };
 		2D8C3B6A22242BA20077AD51 /* RestaurantsMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B6522242BA20077AD51 /* RestaurantsMapPresenter.swift */; };
 		2D8C3B6B22242BA20077AD51 /* RestaurantsMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B6622242BA20077AD51 /* RestaurantsMapViewController.xib */; };
@@ -39,6 +39,8 @@
 		2D8C3BAC2224417F0077AD51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3BAE2224417F0077AD51 /* Localizable.strings */; };
 		2D8C3BB3222444260077AD51 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BB1222444260077AD51 /* Bundle+Extensions.swift */; };
 		2D8C3BB4222444260077AD51 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BB2222444260077AD51 /* UIColor+Extensions.swift */; };
+		2D8C3BB92224506F0077AD51 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA8222440940077AD51 /* Localizable.swift */; };
+		2D8C3BBA222450D10077AD51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3BAE2224417F0077AD51 /* Localizable.strings */; };
 		9CCB36B5F03ADAF6201D169F /* Pods_CoolRestaurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB3CC5ADBD2FCB6CBE7BAD7 /* Pods_CoolRestaurants.framework */; };
 		EED5EB84457D52D44FA10427 /* Pods_CoolRestaurantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD195D6BB98305A8845F3EF /* Pods_CoolRestaurantsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,10 +71,10 @@
 		2D8C3B3D22242A450077AD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D8C3B3F22242A450077AD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D8C3B4422242A460077AD51 /* CoolRestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolRestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D8C3B4822242A460077AD51 /* CoolRestaurantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRestaurantsTests.swift; sourceTree = "<group>"; };
+		2D8C3B4822242A460077AD51 /* RestaurantRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepositoryTests.swift; sourceTree = "<group>"; };
 		2D8C3B4A22242A460077AD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D8C3B4F22242A460077AD51 /* CoolRestaurantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolRestaurantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D8C3B5322242A460077AD51 /* CoolRestaurantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRestaurantsUITests.swift; sourceTree = "<group>"; };
+		2D8C3B5322242A460077AD51 /* RestaurantsMapViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsMapViewTest.swift; sourceTree = "<group>"; };
 		2D8C3B5522242A460077AD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D8C3B6422242BA20077AD51 /* RestaurantsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsMapViewController.swift; sourceTree = "<group>"; };
 		2D8C3B6522242BA20077AD51 /* RestaurantsMapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsMapPresenter.swift; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 		2D8C3B4722242A460077AD51 /* CoolRestaurantsTests */ = {
 			isa = PBXGroup;
 			children = (
-				2D8C3B4822242A460077AD51 /* CoolRestaurantsTests.swift */,
+				2D8C3B4822242A460077AD51 /* RestaurantRepositoryTests.swift */,
 				2D8C3B4A22242A460077AD51 /* Info.plist */,
 			);
 			path = CoolRestaurantsTests;
@@ -189,7 +191,7 @@
 		2D8C3B5222242A460077AD51 /* CoolRestaurantsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2D8C3B5322242A460077AD51 /* CoolRestaurantsUITests.swift */,
+				2D8C3B5322242A460077AD51 /* RestaurantsMapViewTest.swift */,
 				2D8C3B5522242A460077AD51 /* Info.plist */,
 			);
 			path = CoolRestaurantsUITests;
@@ -478,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8C3BBA222450D10077AD51 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +521,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    (cd ./CoolRestaurants ; ${PODS_ROOT}/SwiftLint/swiftlint)\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		5C2C6AFA608F390D5437B2FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -650,7 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D8C3B4922242A460077AD51 /* CoolRestaurantsTests.swift in Sources */,
+				2D8C3B4922242A460077AD51 /* RestaurantRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +661,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D8C3B5422242A460077AD51 /* CoolRestaurantsUITests.swift in Sources */,
+				2D8C3BB92224506F0077AD51 /* Localizable.swift in Sources */,
+				2D8C3B5422242A460077AD51 /* RestaurantsMapViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
