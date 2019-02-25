@@ -61,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1649D5149B9D04348F46698F /* Pods-CoolRestaurants.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurants.mock.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants.mock.xcconfig"; sourceTree = "<group>"; };
+		2CC1703018FC077004F98AB6 /* Pods-CoolRestaurantsUITests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsUITests.mock.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsUITests/Pods-CoolRestaurantsUITests.mock.xcconfig"; sourceTree = "<group>"; };
 		2D8C3B3022242A440077AD51 /* CoolRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8C3B3322242A440077AD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D8C3B3A22242A450077AD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		9CD195D6BB98305A8845F3EF /* Pods_CoolRestaurantsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolRestaurantsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9F290A95CD51469AA0315A /* Pods_CoolRestaurantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolRestaurantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE42C5B1878C34D63AFD1DEC /* Pods-CoolRestaurantsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsUITests/Pods-CoolRestaurantsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE4CF8232CAE862FAF885BC0 /* Pods-CoolRestaurantsTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsTests.mock.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsTests/Pods-CoolRestaurantsTests.mock.xcconfig"; sourceTree = "<group>"; };
 		B786A928690B3A39BCA2CC6A /* Pods-CoolRestaurantsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsUITests/Pods-CoolRestaurantsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF8647C6E53FB50F69E5D7B8 /* Pods-CoolRestaurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +331,9 @@
 				980107C0252A5E4DD4ECF17E /* Pods-CoolRestaurantsTests.release.xcconfig */,
 				AE42C5B1878C34D63AFD1DEC /* Pods-CoolRestaurantsUITests.debug.xcconfig */,
 				B786A928690B3A39BCA2CC6A /* Pods-CoolRestaurantsUITests.release.xcconfig */,
+				1649D5149B9D04348F46698F /* Pods-CoolRestaurants.mock.xcconfig */,
+				AE4CF8232CAE862FAF885BC0 /* Pods-CoolRestaurantsTests.mock.xcconfig */,
+				2CC1703018FC077004F98AB6 /* Pods-CoolRestaurantsUITests.mock.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			buildPhases = (
 				F99F5DC253FBD904E440B824 /* [CP] Check Pods Manifest.lock */,
 				2D8C3BB02224427A0077AD51 /* SwiftGen */,
+				2D8C3BB5222446170077AD51 /* SwiftLint */,
 				2D8C3B2C22242A440077AD51 /* Sources */,
 				2D8C3B2D22242A440077AD51 /* Frameworks */,
 				2D8C3B2E22242A440077AD51 /* Resources */,
@@ -494,6 +501,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Pods/SwiftGen/bin/swiftgen strings -template \"structured-swift4\" --param \"enumName=Strings\" \"./CoolRestaurants/Localizations/en.lproj/Localizable.strings\" --output \"./CoolRestaurants/Localizations/Localizable.swift\"\n\n";
+		};
+		2D8C3BB5222446170077AD51 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		5C2C6AFA608F390D5437B2FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -979,7 +1004,7 @@
 		};
 		2D8C3BA522243DBD0077AD51 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF8647C6E53FB50F69E5D7B8 /* Pods-CoolRestaurants.debug.xcconfig */;
+			baseConfigurationReference = 1649D5149B9D04348F46698F /* Pods-CoolRestaurants.mock.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -991,6 +1016,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sumeru.CoolRestaurants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG MOCK";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -998,7 +1024,7 @@
 		};
 		2D8C3BA622243DBD0077AD51 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 405CE8D90E1BED32026D71A9 /* Pods-CoolRestaurantsTests.debug.xcconfig */;
+			baseConfigurationReference = AE4CF8232CAE862FAF885BC0 /* Pods-CoolRestaurantsTests.mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1020,7 +1046,7 @@
 		};
 		2D8C3BA722243DBD0077AD51 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE42C5B1878C34D63AFD1DEC /* Pods-CoolRestaurantsUITests.debug.xcconfig */;
+			baseConfigurationReference = 2CC1703018FC077004F98AB6 /* Pods-CoolRestaurantsUITests.mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

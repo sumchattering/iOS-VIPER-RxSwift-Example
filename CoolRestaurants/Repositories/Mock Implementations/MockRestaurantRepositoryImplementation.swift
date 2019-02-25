@@ -10,6 +10,7 @@ import RxSwift
 
 class MockRestaurantRepositoryImplementation: RestaurantRepository {
     
+    static let instance = MockRestaurantRepositoryImplementation()
     let mockDelay = 2 // seconds
     
     func getRestaurants() -> Single<[Restaurant]> {
