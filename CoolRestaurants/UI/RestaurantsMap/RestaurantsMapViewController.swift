@@ -18,6 +18,8 @@ class RestaurantsMapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Theme.theme(self)
+        
+        self.title = Strings.App.Mainview.title
     }
     
 }

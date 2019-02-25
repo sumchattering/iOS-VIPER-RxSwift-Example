@@ -1,5 +1,5 @@
 //
-//  RestaurantsRepositoryImplementation.swift
+//  RestaurantRepositoryImplementation.swift
 //  CoolRestaurants
 //
 //  Created by Sumeru Chatterjee on 25/02/2019.
@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class MockRestaurantsRepositoryImplementation: RestaurantsRepository {
+class MockRestaurantRepositoryImplementation: RestaurantRepository {
     
     let mockDelay = 2 // seconds
     

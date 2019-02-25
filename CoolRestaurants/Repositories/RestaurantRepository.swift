@@ -1,5 +1,5 @@
 //
-//  RestaurantsRepository.swift
+//  RestaurantRepository.swift
 //  CoolRestaurants
 //
 //  Created by Sumeru Chatterjee on 25/02/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol RestaurantsRepository {
+protocol RestaurantRepository {
     
     func getRestaurants() -> Single<[Restaurant]>
     

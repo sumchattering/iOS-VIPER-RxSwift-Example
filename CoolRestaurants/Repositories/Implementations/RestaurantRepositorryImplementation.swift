@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class RestaurantsRepositoryImplementation: RestaurantsRepository {
+class RestaurantRepositoryImplementation: RestaurantRepository {
     
     func getRestaurants() -> Single<[Restaurant]> {
         return Single.just([])

@@ -12,9 +12,9 @@ class RepositoryInjection {
     
     static let shared: RepositoryInjection = RepositoryInjection()
     
-    lazy var dataRepository: RestaurantsRepository = { return RestaurantsRepositoryImplementation() }()
+    lazy var dataRepository: RestaurantRepository = { return RestaurantRepositoryImplementation() }()
 
-    static func provideRestaurantsRepository() -> RestaurantsRepository {
+    static func provideRestaurantRepository() -> RestaurantRepository {
         return shared.dataRepository
     }
 }

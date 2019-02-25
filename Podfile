@@ -8,6 +8,7 @@ target 'CoolRestaurants' do
   # Pods for CoolRestaurants
   pod 'RxSwift'
   pod 'SwiftGen'
+  pod 'SwiftLint'
   pod 'SDWebImage'
 
   target 'CoolRestaurantsTests' do

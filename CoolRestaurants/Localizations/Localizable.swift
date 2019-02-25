@@ -1,5 +1,5 @@
 // swiftlint:disable all
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 import Foundation
 
@@ -10,27 +10,23 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
-internal enum L10n {
-  /// Age %1$@
-  internal static func ageLabelText(_ p1: String) -> String {
-    return L10n.tr("Localizable", "AgeLabelText", p1)
+internal enum Strings {
+
+  internal enum App {
+    internal enum Mainview {
+      /// CoolRestaurants
+      internal static let title = Strings.tr("Localizable", "app.mainview.title")
+    }
   }
-  /// Number of Issues %1$@
-  internal static func numberIssuesLabelText(_ p1: String) -> String {
-    return L10n.tr("Localizable", "NumberIssuesLabelText", p1)
-  }
-  /// Ok
-  internal static let ok = L10n.tr("Localizable", "Ok")
-  /// People
-  internal static let tableViewTitle = L10n.tr("Localizable", "TableViewTitle")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
-extension L10n {
+extension Strings {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
+    // swiftlint:disable:next nslocalizedstring_key
     let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }

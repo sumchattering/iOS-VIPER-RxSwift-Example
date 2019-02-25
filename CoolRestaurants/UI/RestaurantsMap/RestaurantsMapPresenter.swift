@@ -12,12 +12,12 @@ import RxSwift
 class RestaurantsMapPresenter: BasePresenter {
     
     private let router: RestaurantsMapRouter
-    private let restaurantsRepository: RestaurantsRepository
+    private let restaurantRepository: RestaurantRepository
     private var restaurantsMapView: RestaurantsMapView? { return view as? RestaurantsMapView }
     private let disposeBag = DisposeBag()
 
-    init(restaurantsRepository: RestaurantsRepository, router: RestaurantsMapRouter) {
-		self.restaurantsRepository = restaurantsRepository
+    init(restaurantRepository: RestaurantRepository, router: RestaurantsMapRouter) {
+		self.restaurantRepository = restaurantRepository
         self.router = router
     }
     
@@ -26,7 +26,7 @@ class RestaurantsMapPresenter: BasePresenter {
     }
     
     private func fetchRestaurants() {
-        self.restaurantsRepository.getRestaurants().subscribe(onSuccess: { restaurants in
+        self.restaurantRepository.getRestaurants().subscribe(onSuccess: { restaurants in
             self.restaurantsMapView?.showRestaurants(restaurants: restaurants)
         }, onError:{ _ in
             // handle error

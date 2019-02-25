@@ -13,8 +13,8 @@ class RestaurantsMapCoordinator: BaseCoordinator {
 
     override func setup() -> UIViewController {
         let viewController = RestaurantsMapViewController()
-        let restaurantsRepository = RepositoryInjection.provideRestaurantsRepository()
-        let presenter = RestaurantsMapPresenter(restaurantsRepository: restaurantsRepository, router: self)
+        let restaurantRepository = RepositoryInjection.provideRestaurantRepository()
+        let presenter = RestaurantsMapPresenter(restaurantRepository: restaurantRepository, router: self)
         bind(presenter, with: viewController)
         
         return viewController

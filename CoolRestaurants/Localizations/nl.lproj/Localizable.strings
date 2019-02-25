@@ -1,12 +1,9 @@
 /* 
   Localizable.strings
-  CoolCSVExample
+  CoolRestaurants
 
-  Created by Sumeru Chatterjee on 01/02/2019.
+  Created by Sumeru Chatterjee on 25/02/2019.
   Copyright © 2019 Sumeru Chatterjee. All rights reserved.
 */
 
-"TableViewTitle" = "Mensen";
-"OK" = "Oke";
-"AgeLabelText" = "Leeftijd: %1$@";
-"NumberIssuesLabelText" = "Aantal problemen: %1$@";
+"app.mainview.title" = "CoolRestaurants";

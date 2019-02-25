@@ -31,11 +31,14 @@
 		2D8C3B9322242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B9222242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift */; };
 		2D8C3B9622242F370077AD51 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B9522242F370077AD51 /* Theme.swift */; };
 		2D8C3B9A222435E80077AD51 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */; };
-		2D8C3B9B222435E80077AD51 /* MockDataRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */; };
+		2D8C3B9B222435E80077AD51 /* MockRestaurantRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B98222435E70077AD51 /* MockRestaurantRepositoryImplementation.swift */; };
 		2D8C3B9C222435E80077AD51 /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */; };
 		2D8C3BA1222437010077AD51 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA0222437010077AD51 /* Restuarant.swift */; };
 		2D8C3BA322243A970077AD51 /* RestaurantRepositorryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */; };
 		2D8C3BA9222440940077AD51 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA8222440940077AD51 /* Localizable.swift */; };
+		2D8C3BAC2224417F0077AD51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3BAE2224417F0077AD51 /* Localizable.strings */; };
+		2D8C3BB3222444260077AD51 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BB1222444260077AD51 /* Bundle+Extensions.swift */; };
+		2D8C3BB4222444260077AD51 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BB2222444260077AD51 /* UIColor+Extensions.swift */; };
 		9CCB36B5F03ADAF6201D169F /* Pods_CoolRestaurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB3CC5ADBD2FCB6CBE7BAD7 /* Pods_CoolRestaurants.framework */; };
 		EED5EB84457D52D44FA10427 /* Pods_CoolRestaurantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD195D6BB98305A8845F3EF /* Pods_CoolRestaurantsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -87,11 +90,15 @@
 		2D8C3B9222242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoidingKeyboardConstraintProtocol.swift; sourceTree = "<group>"; };
 		2D8C3B9522242F370077AD51 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
-		2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataRepositoryImplementation.swift; sourceTree = "<group>"; };
+		2D8C3B98222435E70077AD51 /* MockRestaurantRepositoryImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRestaurantRepositoryImplementation.swift; sourceTree = "<group>"; };
 		2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
 		2D8C3BA0222437010077AD51 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepositorryImplementation.swift; sourceTree = "<group>"; };
 		2D8C3BA8222440940077AD51 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		2D8C3BAD2224417F0077AD51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D8C3BAF222441940077AD51 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D8C3BB1222444260077AD51 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		2D8C3BB2222444260077AD51 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		405CE8D90E1BED32026D71A9 /* Pods-CoolRestaurantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsTests/Pods-CoolRestaurantsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BB3CC5ADBD2FCB6CBE7BAD7 /* Pods_CoolRestaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolRestaurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF0F7CC92E0B238645C47F0 /* Pods-CoolRestaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurants.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +262,8 @@
 		2D8C3B8322242CCC0077AD51 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2D8C3BB1222444260077AD51 /* Bundle+Extensions.swift */,
+				2D8C3BB2222444260077AD51 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8C3BA8222440940077AD51 /* Localizable.swift */,
+				2D8C3BAE2224417F0077AD51 /* Localizable.strings */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -296,7 +306,7 @@
 		2D8C3B9D222436270077AD51 /* Mock Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */,
+				2D8C3B98222435E70077AD51 /* MockRestaurantRepositoryImplementation.swift */,
 			);
 			path = "Mock Implementations";
 			sourceTree = "<group>";
@@ -340,6 +350,7 @@
 			buildConfigurationList = 2D8C3B5822242A460077AD51 /* Build configuration list for PBXNativeTarget "CoolRestaurants" */;
 			buildPhases = (
 				F99F5DC253FBD904E440B824 /* [CP] Check Pods Manifest.lock */,
+				2D8C3BB02224427A0077AD51 /* SwiftGen */,
 				2D8C3B2C22242A440077AD51 /* Sources */,
 				2D8C3B2D22242A440077AD51 /* Frameworks */,
 				2D8C3B2E22242A440077AD51 /* Resources */,
@@ -422,6 +433,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 2D8C3B2722242A440077AD51;
 			productRefGroup = 2D8C3B3122242A440077AD51 /* Products */;
@@ -440,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8C3BAC2224417F0077AD51 /* Localizable.strings in Resources */,
 				2D8C3B7D22242C350077AD51 /* RestaurantsDetailViewController.xib in Resources */,
 				2D8C3B3E22242A450077AD51 /* LaunchScreen.storyboard in Resources */,
 				2D8C3B3B22242A450077AD51 /* Assets.xcassets in Resources */,
@@ -464,6 +477,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D8C3BB02224427A0077AD51 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Pods/SwiftGen/bin/swiftgen strings -template \"structured-swift4\" --param \"enumName=Strings\" \"./CoolRestaurants/Localizations/en.lproj/Localizable.strings\" --output \"./CoolRestaurants/Localizations/Localizable.swift\"\n\n";
+		};
 		5C2C6AFA608F390D5437B2FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -563,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8C3BB3222444260077AD51 /* Bundle+Extensions.swift in Sources */,
 				2D8C3BA9222440940077AD51 /* Localizable.swift in Sources */,
 				2D8C3BA1222437010077AD51 /* Restuarant.swift in Sources */,
 				2D8C3B7C22242C350077AD51 /* RestaurantsDetailViewController.swift in Sources */,
@@ -581,10 +613,11 @@
 				2D8C3B7B22242C350077AD51 /* RestaurantsDetailCoordinator.swift in Sources */,
 				2D8C3B8D22242DC30077AD51 /* Coordinator.swift in Sources */,
 				2D8C3B7A22242C350077AD51 /* RestaurantsDetailContracts.swift in Sources */,
+				2D8C3BB4222444260077AD51 /* UIColor+Extensions.swift in Sources */,
 				2D8C3B9322242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift in Sources */,
 				2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */,
 				2D8C3B8C22242DC30077AD51 /* BasePresenter.swift in Sources */,
-				2D8C3B9B222435E80077AD51 /* MockDataRepositoryImplementation.swift in Sources */,
+				2D8C3B9B222435E80077AD51 /* MockRestaurantRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +661,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		2D8C3BAE2224417F0077AD51 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D8C3BAD2224417F0077AD51 /* en */,
+				2D8C3BAF222441940077AD51 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -635,6 +677,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -696,6 +739,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -875,6 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
