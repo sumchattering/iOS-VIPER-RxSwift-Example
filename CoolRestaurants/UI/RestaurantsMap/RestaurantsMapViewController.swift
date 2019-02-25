@@ -22,4 +22,10 @@ class RestaurantsMapViewController: BaseViewController {
     
 }
 
-extension RestaurantsMapViewController: RestaurantsMapView { }
+extension RestaurantsMapViewController: RestaurantsMapView {
+    
+    func showRestaurants(restaurants: [Restaurant]) {
+        
+    }
+    
+}

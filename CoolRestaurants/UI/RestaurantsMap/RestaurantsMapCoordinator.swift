@@ -13,7 +13,8 @@ class RestaurantsMapCoordinator: BaseCoordinator {
 
     override func setup() -> UIViewController {
         let viewController = RestaurantsMapViewController()
-        let presenter = RestaurantsMapPresenter(router: self)
+        let restaurantsRepository = RepositoryInjection.provideRestaurantsRepository()
+        let presenter = RestaurantsMapPresenter(restaurantsRepository: restaurantsRepository, router: self)
         bind(presenter, with: viewController)
         
         return viewController
@@ -31,4 +32,9 @@ class RestaurantsMapCoordinator: BaseCoordinator {
     
 }
 
-extension RestaurantsMapCoordinator: RestaurantsMapRouter { }
+extension RestaurantsMapCoordinator: RestaurantsMapRouter {
+    
+    func goToRestaurantDetail(restaurant: Restaurant) {
+        RestaurantsDetailCoordinator(restaurant, navigationController: self.currentNavigationController).start()
+    }
+}

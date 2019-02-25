@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class RestaurantsDetailCoordinator: BaseCoordinator {
+    
+    private let restaurant: Restaurant
+    
+    init(_ restaurant: Restaurant, navigationController: UINavigationController?) {
+        self.restaurant = restaurant
+        super.init(navigationController)
+    }
 
     override func setup() -> UIViewController {
         let viewController = RestaurantsDetailViewController()

@@ -30,6 +30,12 @@
 		2D8C3B8F22242DC30077AD51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B8A22242DC30077AD51 /* BaseViewController.swift */; };
 		2D8C3B9322242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B9222242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift */; };
 		2D8C3B9622242F370077AD51 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B9522242F370077AD51 /* Theme.swift */; };
+		2D8C3B9A222435E80077AD51 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */; };
+		2D8C3B9B222435E80077AD51 /* MockDataRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */; };
+		2D8C3B9C222435E80077AD51 /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */; };
+		2D8C3BA1222437010077AD51 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA0222437010077AD51 /* Restuarant.swift */; };
+		2D8C3BA322243A970077AD51 /* RestaurantRepositorryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */; };
+		2D8C3BA9222440940077AD51 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3BA8222440940077AD51 /* Localizable.swift */; };
 		9CCB36B5F03ADAF6201D169F /* Pods_CoolRestaurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB3CC5ADBD2FCB6CBE7BAD7 /* Pods_CoolRestaurants.framework */; };
 		EED5EB84457D52D44FA10427 /* Pods_CoolRestaurantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD195D6BB98305A8845F3EF /* Pods_CoolRestaurantsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +86,12 @@
 		2D8C3B8A22242DC30077AD51 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2D8C3B9222242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoidingKeyboardConstraintProtocol.swift; sourceTree = "<group>"; };
 		2D8C3B9522242F370077AD51 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
+		2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataRepositoryImplementation.swift; sourceTree = "<group>"; };
+		2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
+		2D8C3BA0222437010077AD51 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
+		2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepositorryImplementation.swift; sourceTree = "<group>"; };
+		2D8C3BA8222440940077AD51 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		405CE8D90E1BED32026D71A9 /* Pods-CoolRestaurantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsTests/Pods-CoolRestaurantsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BB3CC5ADBD2FCB6CBE7BAD7 /* Pods_CoolRestaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolRestaurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF0F7CC92E0B238645C47F0 /* Pods-CoolRestaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurants.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +236,7 @@
 		2D8C3B8022242C8C0077AD51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D8C3BA0222437010077AD51 /* Restuarant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +244,10 @@
 		2D8C3B8122242CBA0077AD51 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */,
+				2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */,
+				2D8C3B9E222436330077AD51 /* Implementations */,
+				2D8C3B9D222436270077AD51 /* Mock Implementations */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -255,6 +272,7 @@
 		2D8C3B8522242D050077AD51 /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
+				2D8C3BA8222440940077AD51 /* Localizable.swift */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -273,6 +291,22 @@
 				2D8C3B9522242F370077AD51 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		2D8C3B9D222436270077AD51 /* Mock Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C3B98222435E70077AD51 /* MockDataRepositoryImplementation.swift */,
+			);
+			path = "Mock Implementations";
+			sourceTree = "<group>";
+		};
+		2D8C3B9E222436330077AD51 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		3E43183DF0EBFAA4C2584552 /* Pods */ = {
@@ -529,14 +563,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8C3BA9222440940077AD51 /* Localizable.swift in Sources */,
+				2D8C3BA1222437010077AD51 /* Restuarant.swift in Sources */,
 				2D8C3B7C22242C350077AD51 /* RestaurantsDetailViewController.swift in Sources */,
+				2D8C3B9A222435E80077AD51 /* RepositoryInjection.swift in Sources */,
 				2D8C3B7922242C350077AD51 /* RestaurantsDetailPresenter.swift in Sources */,
 				2D8C3B8E22242DC30077AD51 /* BaseCoordinator.swift in Sources */,
 				2D8C3B6922242BA20077AD51 /* RestaurantsMapViewController.swift in Sources */,
 				2D8C3B6C22242BA20077AD51 /* RestaurantsMapCoordinator.swift in Sources */,
 				2D8C3B8F22242DC30077AD51 /* BaseViewController.swift in Sources */,
 				2D8C3B6D22242BA20077AD51 /* RestaurantsMapContracts.swift in Sources */,
+				2D8C3B9C222435E80077AD51 /* RestaurantRepository.swift in Sources */,
 				2D8C3B6A22242BA20077AD51 /* RestaurantsMapPresenter.swift in Sources */,
+				2D8C3BA322243A970077AD51 /* RestaurantRepositorryImplementation.swift in Sources */,
 				2D8C3B8B22242DC30077AD51 /* BaseContract.swift in Sources */,
 				2D8C3B9622242F370077AD51 /* Theme.swift in Sources */,
 				2D8C3B7B22242C350077AD51 /* RestaurantsDetailCoordinator.swift in Sources */,
@@ -545,6 +584,7 @@
 				2D8C3B9322242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift in Sources */,
 				2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */,
 				2D8C3B8C22242DC30077AD51 /* BasePresenter.swift in Sources */,
+				2D8C3B9B222435E80077AD51 /* MockDataRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +871,129 @@
 			};
 			name = Release;
 		};
+		2D8C3BA422243DBD0077AD51 /* Mock */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Mock;
+		};
+		2D8C3BA522243DBD0077AD51 /* Mock */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF8647C6E53FB50F69E5D7B8 /* Pods-CoolRestaurants.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WU43C8R8M3;
+				INFOPLIST_FILE = CoolRestaurants/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumeru.CoolRestaurants;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Mock;
+		};
+		2D8C3BA622243DBD0077AD51 /* Mock */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 405CE8D90E1BED32026D71A9 /* Pods-CoolRestaurantsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WU43C8R8M3;
+				INFOPLIST_FILE = CoolRestaurantsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumeru.CoolRestaurantsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolRestaurants.app/CoolRestaurants";
+			};
+			name = Mock;
+		};
+		2D8C3BA722243DBD0077AD51 /* Mock */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE42C5B1878C34D63AFD1DEC /* Pods-CoolRestaurantsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WU43C8R8M3;
+				INFOPLIST_FILE = CoolRestaurantsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumeru.CoolRestaurantsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoolRestaurants;
+			};
+			name = Mock;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -838,6 +1001,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D8C3B5622242A460077AD51 /* Debug */,
+				2D8C3BA422243DBD0077AD51 /* Mock */,
 				2D8C3B5722242A460077AD51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -847,6 +1011,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D8C3B5922242A460077AD51 /* Debug */,
+				2D8C3BA522243DBD0077AD51 /* Mock */,
 				2D8C3B5A22242A460077AD51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -856,6 +1021,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D8C3B5C22242A460077AD51 /* Debug */,
+				2D8C3BA622243DBD0077AD51 /* Mock */,
 				2D8C3B5D22242A460077AD51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -865,6 +1031,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D8C3B5F22242A460077AD51 /* Debug */,
+				2D8C3BA722243DBD0077AD51 /* Mock */,
 				2D8C3B6022242A460077AD51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

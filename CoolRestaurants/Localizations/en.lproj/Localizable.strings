@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CoolCSVExample
+
+  Created by Sumeru Chatterjee on 01/02/2019.
+  Copyright © 2019 Sumeru Chatterjee. All rights reserved.
+*/
+
+"TableViewTitle" = "People";
+"Ok" = "Ok";
+"AgeLabelText" = "Age %1$@";
+"NumberIssuesLabelText" = "Number of Issues %1$@";

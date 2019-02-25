@@ -6,8 +6,16 @@
 //  Copyright © 2019 Sumeru Chatterjee. All rights reserved.
 //
 
-protocol RestaurantsMapView: View { }
+protocol RestaurantsMapView: View {
+
+    func showRestaurants(restaurants: [Restaurant])
+    
+}
 
 protocol RestaurantsMapUserActionsListener: UserActionsListener { }
 
-protocol RestaurantsMapRouter { }
+protocol RestaurantsMapRouter {
+    
+    func goToRestaurantDetail(restaurant: Restaurant)
+    
+}
