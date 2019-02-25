@@ -9,7 +9,7 @@
 import UIKit
 
 protocol Coordinator {
-    
+
     var parentNavigationController: UINavigationController? { get }
     var parentWindow: UIWindow? { get }
     func bind<P: UserActionsListener, V: View>(_ presenter: P, with view: V)
@@ -17,10 +17,9 @@ protocol Coordinator {
 }
 
 extension Coordinator {
-    
+
     func bind<P: UserActionsListener, V: View>(_ presenter: P, with view: V) {
         presenter.attach(view: view)
         view.userActionsListener = presenter
     }
 }
-

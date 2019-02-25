@@ -10,10 +10,10 @@ import Foundation
 import RxSwift
 
 class RestaurantsDetailPresenter: BasePresenter {
-    
+
     private let router: RestaurantsDetailRouter
     private var restaurantsDetailView: RestaurantsDetailView? { return view as? RestaurantsDetailView }
-    
+
     init(router: RestaurantsDetailRouter) {
 		self.router = router
     }

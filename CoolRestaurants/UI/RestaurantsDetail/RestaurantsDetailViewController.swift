@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 class RestaurantsDetailViewController: BaseViewController {
-    
+
     private var restaurantsDetailUserActionsListener: RestaurantsDetailUserActionsListener? {
         return userActionsListener as? RestaurantsDetailUserActionsListener
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Theme.theme(self)
     }
-    
+
 }
 
 extension RestaurantsDetailViewController: RestaurantsDetailView { }

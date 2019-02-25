@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol RestaurantRepository {
-    
+
     func getRestaurants() -> Single<[Restaurant]>
-    
+
 }

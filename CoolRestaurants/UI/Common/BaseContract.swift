@@ -13,9 +13,9 @@ protocol View: class {
 }
 
 protocol UserActionsListener: class {
-    
+
     var view: View? { get set }
-    
+
     func attach(view: View)
     func initialize()
     func resume()

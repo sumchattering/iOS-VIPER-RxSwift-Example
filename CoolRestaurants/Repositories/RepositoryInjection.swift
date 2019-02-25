@@ -9,9 +9,9 @@
 import Foundation
 
 class RepositoryInjection {
-    
+
     static let shared: RepositoryInjection = RepositoryInjection()
-    
+
     lazy var restaurantRepositoy: RestaurantRepository = { return RestaurantRepositoryImplementation() }()
 
     static func provideRestaurantRepository() -> RestaurantRepository {

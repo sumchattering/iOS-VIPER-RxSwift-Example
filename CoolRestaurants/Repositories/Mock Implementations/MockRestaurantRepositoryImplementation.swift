@@ -9,10 +9,10 @@
 import RxSwift
 
 class MockRestaurantRepositoryImplementation: RestaurantRepository {
-    
+
     static let instance = MockRestaurantRepositoryImplementation()
     let mockDelay = 2 // seconds
-    
+
     func getRestaurants() -> Single<[Restaurant]> {
         return Single.create(subscribe: { [weak self] observer in
             guard let `self` = self else { return Disposables.create() }
@@ -26,7 +26,7 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
             return Disposables.create()
         })
     }
-    
+
     private func createMockRestaurants() -> [Restaurant] {
         var mockRestaurants = [Restaurant]()
         for index in 0...10 {
@@ -37,6 +37,5 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
         }
         return mockRestaurants
     }
-    
-}
 
+}

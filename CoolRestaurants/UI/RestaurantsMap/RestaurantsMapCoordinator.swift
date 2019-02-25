@@ -16,24 +16,24 @@ class RestaurantsMapCoordinator: BaseCoordinator {
         let restaurantRepository = RepositoryInjection.provideRestaurantRepository()
         let presenter = RestaurantsMapPresenter(restaurantRepository: restaurantRepository, router: self)
         bind(presenter, with: viewController)
-        
+
         return viewController
     }
 
     override func start() {
         let viewController = self.setup()
-     
+
         let navigationController = UINavigationController(rootViewController: viewController)
         self.currentNavigationController = navigationController
-     
+
         self.parentWindow?.rootViewController = navigationController
         self.parentWindow?.makeKeyAndVisible()
     }
-    
+
 }
 
 extension RestaurantsMapCoordinator: RestaurantsMapRouter {
-    
+
     func goToRestaurantDetail(restaurant: Restaurant) {
         RestaurantsDetailCoordinator(restaurant, navigationController: self.currentNavigationController).start()
     }

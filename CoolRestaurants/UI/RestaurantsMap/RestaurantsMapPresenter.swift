@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class RestaurantsMapPresenter: BasePresenter {
-    
+
     private let router: RestaurantsMapRouter
     private let restaurantRepository: RestaurantRepository
     private var restaurantsMapView: RestaurantsMapView? { return view as? RestaurantsMapView }
@@ -20,15 +20,15 @@ class RestaurantsMapPresenter: BasePresenter {
 		self.restaurantRepository = restaurantRepository
         self.router = router
     }
-    
+
     override func initialize() {
         super.initialize()
     }
-    
+
     private func fetchRestaurants() {
         self.restaurantRepository.getRestaurants().subscribe(onSuccess: { restaurants in
             self.restaurantsMapView?.showRestaurants(restaurants: restaurants)
-        }, onError:{ _ in
+        }, onError: { _ in
             // handle error
         }).disposed(by: self.disposeBag)
     }

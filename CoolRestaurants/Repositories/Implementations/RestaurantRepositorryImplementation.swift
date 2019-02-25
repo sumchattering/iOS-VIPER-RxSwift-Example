@@ -9,10 +9,9 @@
 import RxSwift
 
 class RestaurantRepositoryImplementation: RestaurantRepository {
-    
+
     func getRestaurants() -> Single<[Restaurant]> {
         return Single.just([])
     }
-    
-}
 
+}

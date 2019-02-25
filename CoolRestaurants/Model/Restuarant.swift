@@ -9,7 +9,7 @@
 import Foundation
 
 struct Restaurant {
-    
+
     let identifier: String
     let name: String
     let description: String

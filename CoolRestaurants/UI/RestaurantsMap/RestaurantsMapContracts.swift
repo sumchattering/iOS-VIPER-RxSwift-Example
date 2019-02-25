@@ -9,13 +9,13 @@
 protocol RestaurantsMapView: View {
 
     func showRestaurants(restaurants: [Restaurant])
-    
+
 }
 
 protocol RestaurantsMapUserActionsListener: UserActionsListener { }
 
 protocol RestaurantsMapRouter {
-    
+
     func goToRestaurantDetail(restaurant: Restaurant)
-    
+
 }

@@ -10,25 +10,25 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+
     var userActionsListener: UserActionsListener?
-    
+
     // MARK: - KeyboardObservers
     var keyboardWillShowObserver: AnyObject?
     var keyboardWillHideObserver: AnyObject?
     var defaultBottomSpace: CGFloat = 0.0
-    weak var keyboardConstraint: NSLayoutConstraint? = nil
+    weak var keyboardConstraint: NSLayoutConstraint?
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     var hasViewAppeared: Bool = false
-    
+
     deinit {
         removeKeyboardObservers()
     }
@@ -39,16 +39,16 @@ class BaseViewController: UIViewController {
         if self.keyboardConstraint != nil {
             self.addKeyboardObservers()
         }
-        
+
         if !hasViewAppeared {
             userActionsListener?.initialize()
         } else {
             userActionsListener?.resume()
         }
-        
+
         hasViewAppeared = true
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
@@ -61,15 +61,15 @@ class BaseViewController: UIViewController {
         userActionsListener?.pause()
         super.viewWillDisappear(animated)
     }
-    
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-    
+
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .portrait
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
@@ -79,15 +79,11 @@ class BaseViewController: UIViewController {
 extension BaseViewController: AvoidingKeyboardConstraintProtocol {
 
     var bottomKeyboardConstraint: NSLayoutConstraint? {
-        get {
-            return self.keyboardConstraint
-        }
+        return self.keyboardConstraint
     }
 
     var defaultSpaceWhenKeyboardIsHidden: CGFloat {
-        get {
-            return self.defaultBottomSpace
-        }
+        return self.defaultBottomSpace
     }
 
 }

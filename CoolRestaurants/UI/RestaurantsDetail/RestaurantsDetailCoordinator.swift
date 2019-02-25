@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class RestaurantsDetailCoordinator: BaseCoordinator {
-    
+
     private let restaurant: Restaurant
-    
+
     init(_ restaurant: Restaurant, navigationController: UINavigationController?) {
         self.restaurant = restaurant
         super.init(navigationController)
@@ -22,10 +22,10 @@ class RestaurantsDetailCoordinator: BaseCoordinator {
         let viewController = RestaurantsDetailViewController()
         let presenter = RestaurantsDetailPresenter(router: self)
         bind(presenter, with: viewController)
-        
+
         return viewController
     }
-    
+
     /*
     
     override func start() {

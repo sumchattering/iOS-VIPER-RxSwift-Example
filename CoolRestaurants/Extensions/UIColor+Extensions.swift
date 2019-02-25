@@ -6,11 +6,10 @@
 //  Copyright © 2019 Sumeru Chatterjee. All rights reserved.
 //
 
-
 import UIKit
 
 extension UIColor {
-    
+
     /// Converts this `UIColor` instance to a 1x1 `UIImage` instance and returns it.
     ///
     /// - Returns: `self` as a 1x1 `UIImage`.
@@ -22,5 +21,5 @@ extension UIColor {
         UIGraphicsEndImageContext()
         return image
     }
-    
+
 }
