@@ -1,0 +1,30 @@
+PODS:
+  - RxAtomic (4.4.1)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
+  - SwiftGen (6.1.0)
+
+DEPENDENCIES:
+  - RxSwift
+  - SDWebImage
+  - SwiftGen
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxAtomic
+    - RxSwift
+    - SDWebImage
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+
+PODFILE CHECKSUM: e9a44044b4fb6d28e3918dc07130aa6287c94773
+
+COCOAPODS: 1.5.3
