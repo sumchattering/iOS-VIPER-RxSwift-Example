@@ -20,24 +20,20 @@ class RestaurantsDetailCoordinator: BaseCoordinator {
 
     override func setup() -> UIViewController {
         let viewController = RestaurantsDetailViewController()
-        let presenter = RestaurantsDetailPresenter(router: self)
+        let presenter = RestaurantsDetailPresenter(restaurant: restaurant, router: self)
         bind(presenter, with: viewController)
 
         return viewController
     }
 
-    /*
-    
     override func start() {
         let viewController = setup()
-        navigationController?.pushViewController(viewController, animated: true)
+        parentNavigationController?.pushViewController(viewController, animated: true)
     }
     
-    override func stop() {
-        <#navigationController?.popViewController(animated: true)#>
+    override func close() {
+        parentNavigationController?.popViewController(animated: true)
     }
- 
-    */
 }
 
 extension RestaurantsDetailCoordinator: RestaurantsDetailRouter { }

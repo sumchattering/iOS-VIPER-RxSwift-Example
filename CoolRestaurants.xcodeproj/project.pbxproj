@@ -212,9 +212,9 @@
 		2D8C3B7322242C350077AD51 /* RestaurantsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2D8C3B7422242C350077AD51 /* RestaurantsDetailPresenter.swift */,
 				2D8C3B7522242C350077AD51 /* RestaurantsDetailContracts.swift */,
 				2D8C3B7622242C350077AD51 /* RestaurantsDetailCoordinator.swift */,
+				2D8C3B7422242C350077AD51 /* RestaurantsDetailPresenter.swift */,
 				2D8C3B7722242C350077AD51 /* RestaurantsDetailViewController.swift */,
 				2D8C3B7822242C350077AD51 /* RestaurantsDetailViewController.xib */,
 			);

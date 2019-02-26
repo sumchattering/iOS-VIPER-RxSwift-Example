@@ -11,12 +11,20 @@ import RxSwift
 
 class RestaurantsDetailPresenter: BasePresenter {
 
+    private let restaurant: Restaurant
     private let router: RestaurantsDetailRouter
     private var restaurantsDetailView: RestaurantsDetailView? { return view as? RestaurantsDetailView }
 
-    init(router: RestaurantsDetailRouter) {
+    init(restaurant: Restaurant, router: RestaurantsDetailRouter) {
+        self.restaurant = restaurant
 		self.router = router
     }
+    
+    override func initialize() {
+        super.initialize()
+        self.restaurantsDetailView?.showTitle(title: restaurant.name)
+    }
+    
 }
 
 extension RestaurantsDetailPresenter: RestaurantsDetailUserActionsListener { }

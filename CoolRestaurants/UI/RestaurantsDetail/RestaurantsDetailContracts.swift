@@ -6,7 +6,10 @@
 //  Copyright © 2019 Sumeru Chatterjee. All rights reserved.
 //
 
-protocol RestaurantsDetailView: View { }
+protocol RestaurantsDetailView: View {
+    
+    func showTitle(title: String)
+}
 
 protocol RestaurantsDetailUserActionsListener: UserActionsListener { }
 

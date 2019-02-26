@@ -23,6 +23,7 @@ class RestaurantsMapPresenter: BasePresenter {
 
     override func initialize() {
         super.initialize()
+        self.fetchRestaurants()
     }
 
     private func fetchRestaurants() {
@@ -34,4 +35,9 @@ class RestaurantsMapPresenter: BasePresenter {
     }
 }
 
-extension RestaurantsMapPresenter: RestaurantsMapUserActionsListener { }
+extension RestaurantsMapPresenter: RestaurantsMapUserActionsListener {
+    func userDidSelectRestaurant(restaurant: Restaurant) {
+        
+        self.router.goToRestaurantDetail(restaurant: restaurant)
+    }
+}

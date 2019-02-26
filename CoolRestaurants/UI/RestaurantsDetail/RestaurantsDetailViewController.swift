@@ -22,4 +22,9 @@ class RestaurantsDetailViewController: BaseViewController {
 
 }
 
-extension RestaurantsDetailViewController: RestaurantsDetailView { }
+extension RestaurantsDetailViewController: RestaurantsDetailView {
+
+    func showTitle(title: String) {
+        self.title = title
+    }
+}

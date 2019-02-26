@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import MapKit
 
 struct Restaurant {
 
     let identifier: String
     let name: String
     let description: String
+    let coordinate: CLLocationCoordinate2D
 }

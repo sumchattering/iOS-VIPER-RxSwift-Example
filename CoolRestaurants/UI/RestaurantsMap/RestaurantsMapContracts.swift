@@ -9,13 +9,14 @@
 protocol RestaurantsMapView: View {
 
     func showRestaurants(restaurants: [Restaurant])
-
 }
 
-protocol RestaurantsMapUserActionsListener: UserActionsListener { }
+protocol RestaurantsMapUserActionsListener: UserActionsListener {
+    
+    func userDidSelectRestaurant(restaurant: Restaurant)
+}
 
 protocol RestaurantsMapRouter {
 
     func goToRestaurantDetail(restaurant: Restaurant)
-
 }
