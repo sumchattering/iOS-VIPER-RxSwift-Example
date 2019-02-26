@@ -7,3 +7,12 @@
 */
 
 "app.mainview.title" = "CoolRestaurants";
+"app.mainview.locationPermissionText" = "We need your location for some awesome features";
+"app.mainview.locationPermissionAccept" = "Alright";
+"app.mainview.locationPermissionReject" = "Not now";
+"app.mainview.locationPermissionAlertTitle" = "Location Permission Needed";
+"app.mainview.locationPermissionAlertText" = "\nWe need your location. Please go to settings to give us access\n\n";
+"app.mainview.locationPermissionAlertSettingsButton" = "Go To Settings";
+"app.mainview.locationPermissionErrorTitle" = "Location Error";
+"app.mainview.locationPermissionErrorText" = "\nThere was a problem getting your location. Please try later\n\n";
+"app.mainview.locationPermissionErrorOKButton" = "OK";

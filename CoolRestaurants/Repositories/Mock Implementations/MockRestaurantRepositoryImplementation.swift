@@ -13,14 +13,12 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
 
     static let instance = MockRestaurantRepositoryImplementation()
     let mockDelay = 2 // seconds
-    static let mockBaseLatitude = 52.370216
-    static let mockBaseLongitude = 4.895168
 
-    func getRestaurants() -> Single<[Restaurant]> {
+    func getRestaurants(region: MKCoordinateRegion) -> Single<[Restaurant]> {
         return Single.create(subscribe: { [weak self] observer in
             guard let `self` = self else { return Disposables.create() }
             DispatchQueue.global(qos: .background).async {
-                let restaurants = self.createMockRestaurants()
+                let restaurants = self.createMockRestaurants(region: region)
                 let futureTime: DispatchTime = .now() + .seconds(Int(self.mockDelay))
                 DispatchQueue.main.asyncAfter(deadline: futureTime) {
                     observer(.success(restaurants))
@@ -30,21 +28,21 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
         })
     }
 
-    private func createMockRestaurants() -> [Restaurant] {
+    private func createMockRestaurants(region: MKCoordinateRegion) -> [Restaurant] {
         var mockRestaurants = [Restaurant]()
         for index in 0...10 {
             let mockRestaurant = Restaurant(identifier: "MockIdentifier\(index)",
                 name: "MockRestaurant\(index)",
                 description: "MockRestaurantDescription\(index)",
-                coordinate: MockRestaurantRepositoryImplementation.randomCoordinate())
+                coordinate: MockRestaurantRepositoryImplementation.randomCoordinate(center: region.center))
             mockRestaurants.append(mockRestaurant)
         }
         return mockRestaurants
     }
     
-    private static func randomCoordinate() -> CLLocationCoordinate2D {
-        let randomLat = mockBaseLatitude + randomCoordinate()
-        let randomLong = mockBaseLongitude + randomCoordinate()
+    private static func randomCoordinate(center: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+        let randomLat = center.latitude + randomCoordinate()
+        let randomLong = center.longitude + randomCoordinate()
         return CLLocationCoordinate2D(latitude: randomLat, longitude: randomLong)
     }
     

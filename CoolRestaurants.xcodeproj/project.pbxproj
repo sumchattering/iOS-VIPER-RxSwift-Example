@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		16636A2F390AFAB15FA013E8 /* Pods_CoolRestaurantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9F290A95CD51469AA0315A /* Pods_CoolRestaurantsTests.framework */; };
+		2D566AD02224E11700507912 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566ACF2224E11700507912 /* LocationRepository.swift */; };
+		2D566AD22224E19D00507912 /* LocationRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566AD12224E19D00507912 /* LocationRepositoryImplementation.swift */; };
+		2D566AD42224F5CC00507912 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566AD32224F5CC00507912 /* MKCoordinateRegion+Extensions.swift */; };
 		2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3322242A440077AD51 /* AppDelegate.swift */; };
 		2D8C3B3B22242A450077AD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3A22242A450077AD51 /* Assets.xcassets */; };
 		2D8C3B3E22242A450077AD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3C22242A450077AD51 /* LaunchScreen.storyboard */; };
@@ -65,6 +68,9 @@
 /* Begin PBXFileReference section */
 		1649D5149B9D04348F46698F /* Pods-CoolRestaurants.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurants.mock.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants.mock.xcconfig"; sourceTree = "<group>"; };
 		2CC1703018FC077004F98AB6 /* Pods-CoolRestaurantsUITests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolRestaurantsUITests.mock.xcconfig"; path = "Pods/Target Support Files/Pods-CoolRestaurantsUITests/Pods-CoolRestaurantsUITests.mock.xcconfig"; sourceTree = "<group>"; };
+		2D566ACF2224E11700507912 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		2D566AD12224E19D00507912 /* LocationRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryImplementation.swift; sourceTree = "<group>"; };
+		2D566AD32224F5CC00507912 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 		2D8C3B3022242A440077AD51 /* CoolRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8C3B3322242A440077AD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D8C3B3A22242A450077AD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 			children = (
 				2D8C3B97222435E70077AD51 /* RepositoryInjection.swift */,
 				2D8C3B99222435E70077AD51 /* RestaurantRepository.swift */,
+				2D566ACF2224E11700507912 /* LocationRepository.swift */,
 				2D8C3B9E222436330077AD51 /* Implementations */,
 				2D8C3B9D222436270077AD51 /* Mock Implementations */,
 			);
@@ -269,6 +276,7 @@
 			children = (
 				2D8C3BB1222444260077AD51 /* Bundle+Extensions.swift */,
 				2D8C3BB2222444260077AD51 /* UIColor+Extensions.swift */,
+				2D566AD32224F5CC00507912 /* MKCoordinateRegion+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8C3BA222243A970077AD51 /* RestaurantRepositorryImplementation.swift */,
+				2D566AD12224E19D00507912 /* LocationRepositoryImplementation.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -532,17 +541,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FlyoverKit/FlyoverKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/STLocationRequest/STLocationRequest.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlyoverKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STLocationRequest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,12 +639,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D566AD22224E19D00507912 /* LocationRepositoryImplementation.swift in Sources */,
 				2D8C3BB3222444260077AD51 /* Bundle+Extensions.swift in Sources */,
 				2D8C3BA9222440940077AD51 /* Localizable.swift in Sources */,
 				2D8C3BA1222437010077AD51 /* Restuarant.swift in Sources */,
 				2D8C3B7C22242C350077AD51 /* RestaurantsDetailViewController.swift in Sources */,
 				2D8C3B9A222435E80077AD51 /* RepositoryInjection.swift in Sources */,
 				2D8C3B7922242C350077AD51 /* RestaurantsDetailPresenter.swift in Sources */,
+				2D566AD42224F5CC00507912 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				2D566AD02224E11700507912 /* LocationRepository.swift in Sources */,
 				2D8C3B8E22242DC30077AD51 /* BaseCoordinator.swift in Sources */,
 				2D8C3B6922242BA20077AD51 /* RestaurantsMapViewController.swift in Sources */,
 				2D8C3B6C22242BA20077AD51 /* RestaurantsMapCoordinator.swift in Sources */,

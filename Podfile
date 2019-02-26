@@ -10,6 +10,8 @@ target 'CoolRestaurants' do
   pod 'SwiftGen'
   pod 'SwiftLint'
   pod 'SDWebImage'
+  pod 'STLocationRequest'
+  pod 'SwiftLocation'
 
   target 'CoolRestaurantsTests' do
     inherit! :search_paths

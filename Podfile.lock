@@ -1,34 +1,50 @@
 PODS:
+  - FlyoverKit (1.2.2)
   - RxAtomic (4.4.1)
   - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
+  - STLocationRequest (3.3.0):
+    - FlyoverKit (= 1.2.2)
   - SwiftGen (6.1.0)
   - SwiftLint (0.30.1)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - RxSwift
   - SDWebImage
+  - STLocationRequest
   - SwiftGen
   - SwiftLint
+  - SwiftLocation
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FlyoverKit
     - RxAtomic
     - RxSwift
     - SDWebImage
+    - STLocationRequest
     - SwiftGen
     - SwiftLint
+    - SwiftLocation
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  FlyoverKit: 5c34d155a9ac8fc85af795eeca243bc51ebee15f
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  STLocationRequest: 9f84d677355591bbbfbf9073598fe5752e7d1ee1
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: f0518c2651f4ca8dc1465a6abddfe4e794c60b03
+PODFILE CHECKSUM: 51647ada48bcd0c5487e0c9aa94e99d9dc885a2e
 
 COCOAPODS: 1.5.3

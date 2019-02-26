@@ -7,10 +7,11 @@
 //
 
 import RxSwift
+import MapKit
 
 class RestaurantRepositoryImplementation: RestaurantRepository {
-
-    func getRestaurants() -> Single<[Restaurant]> {
+    
+    func getRestaurants(region: MKCoordinateRegion) -> Single<[Restaurant]> {
         return Single.just([])
     }
 

@@ -18,6 +18,8 @@ class BaseViewController: UIViewController {
     var keyboardWillHideObserver: AnyObject?
     var defaultBottomSpace: CGFloat = 0.0
     weak var keyboardConstraint: NSLayoutConstraint?
+    
+    let notificationCenter = NotificationCenter.default
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -29,7 +31,16 @@ class BaseViewController: UIViewController {
 
     var hasViewAppeared: Bool = false
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        notificationCenter.addObserver(self,
+                                       selector: #selector(appWillEnterForeground),
+                                       name: UIApplication.willEnterForegroundNotification,
+                                       object: nil)
+    }
+    
     deinit {
+        notificationCenter.removeObserver(self)
         removeKeyboardObservers()
     }
 
@@ -74,6 +85,9 @@ class BaseViewController: UIViewController {
         return .default
     }
 
+    @objc private func appWillEnterForeground() {
+        userActionsListener?.resume()
+    }
 }
 
 extension BaseViewController: AvoidingKeyboardConstraintProtocol {

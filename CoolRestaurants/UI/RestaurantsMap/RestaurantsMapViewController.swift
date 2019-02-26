@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import STLocationRequest
 
 class ResturantMapViewAnnotaion: MKPointAnnotation {
     let restaurant: Restaurant
@@ -36,6 +37,8 @@ class RestaurantsMapViewController: BaseViewController {
 
         self.setupMapView()
         self.title = Strings.App.Mainview.title
+        
+        self.navigationItem.rightBarButtonItem = MKUserTrackingBarButtonItem(mapView: self.mapView)
     }
 
     private func setupMapView() {
@@ -44,7 +47,51 @@ class RestaurantsMapViewController: BaseViewController {
 }
 
 extension RestaurantsMapViewController: RestaurantsMapView {
-
+    
+    func centreMapOnLocation(location: CLLocation) {
+        self.mapView.region = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: 10000.0,
+            longitudinalMeters: 10000.0
+        )
+    }
+    
+    func showLocationNeededAlert() {
+        let alert = UIAlertController(title: Strings.App.Mainview.locationPermissionAlertTitle,
+                                      message: Strings.App.Mainview.locationPermissionAlertText,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Strings.App.Mainview.locationPermissionAlertSettingsButton,
+                                      style: .default,
+                                      handler: { [weak self] _ in
+            self?.restaurantsMapUserActionsListener?.userTappedGoToSettings()
+        }))
+        self.present(alert, animated: true)
+    }
+    
+    func showLocationErrorAlert() {
+        let alert = UIAlertController(title: Strings.App.Mainview.locationPermissionErrorTitle,
+                                      message: Strings.App.Mainview.locationPermissionErrorText,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Strings.App.Mainview.locationPermissionErrorOKButton,
+                                      style: .default,
+                                      handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func requestLocationPermission() {
+        
+        let locationRequestController = STLocationRequestController { (config: inout STLocationRequestController.Configuration) in
+            config.title.text = Strings.App.Mainview.locationPermissionText
+            config.allowButton.title = Strings.App.Mainview.locationPermissionAccept
+            config.notNowButton.title = Strings.App.Mainview.locationPermissionReject
+            config.mapView.alpha = 0.9
+            config.backgroundColor = UIColor.lightGray
+            config.authorizeType = .requestWhenInUseAuthorization
+        }
+        
+        locationRequestController.present(onViewController: self)
+    }
+    
     func showRestaurants(restaurants: [Restaurant]) {
         let annotations = restaurants.map({ restaurant -> MKAnnotation in
             let annotation = ResturantMapViewAnnotaion(restaurant: restaurant)
@@ -52,10 +99,21 @@ extension RestaurantsMapViewController: RestaurantsMapView {
             annotation.coordinate = restaurant.coordinate
             return annotation
         })
+        self.mapView.removeAnnotations(self.mapView.annotations)
         self.mapView.addAnnotations(annotations)
-        self.mapView.showAnnotations(annotations, animated: true)
     }
 
+    private func hasLocationPermission() -> Bool {
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                return false
+            case .authorizedAlways, .authorizedWhenInUse:
+                return true
+            }
+        }
+        return false
+    }
 }
 
 extension RestaurantsMapViewController: MKMapViewDelegate {
@@ -78,6 +136,10 @@ extension RestaurantsMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let annotation = view.annotation as? ResturantMapViewAnnotaion else { return }
         self.restaurantsMapUserActionsListener?.userDidSelectRestaurant(restaurant: annotation.restaurant)
+    }
+    
+    public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.restaurantsMapUserActionsListener?.mapViewDidChangeRegion(region: mapView.region)
     }
     
 }

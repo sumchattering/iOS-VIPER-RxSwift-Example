@@ -8,9 +8,10 @@
 
 import Foundation
 import RxSwift
+import MapKit
 
 protocol RestaurantRepository {
 
-    func getRestaurants() -> Single<[Restaurant]>
+    func getRestaurants(region: MKCoordinateRegion) -> Single<[Restaurant]>
 
 }

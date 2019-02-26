@@ -7,3 +7,12 @@
 */
 
 "app.mainview.title" = "CoolRestaurants";
+"app.mainview.locationPermissionText" = "We hebben uw locatie nodig voor geweldige functies";
+"app.mainview.locationPermissionAccept" = "Oke";
+"app.mainview.locationPermissionReject" = "Niet nu";
+"app.mainview.locationPermissionAlertTitle" = "Locatie machtiging vereist";
+"app.mainview.locationPermissionAlertText" = "\ nWe hebben uw locatie nodig. Ga naar de instellingen om ons toegang te verlenen\n\n";
+"app.mainview.locationPermissionAlertSettingsButton" = "Ga naar Instellingen";
+"app.mainview.locationPermissionErrorTitle" = "Locatiefout";
+"app.mainview.locationPermissionErrorText" = "\nEr is een probleem opgetreden bij het ophalen van uw locatie. Probeer het later opnieuw \n\n";
+"app.mainview.locationPermissionErrorOKButton" = "OK";
