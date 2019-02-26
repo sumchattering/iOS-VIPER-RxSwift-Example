@@ -33,8 +33,10 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
         for index in 0...10 {
             let mockRestaurant = Restaurant(identifier: "MockIdentifier\(index)",
                 name: "MockRestaurant\(index)",
-                description: "MockRestaurantDescription\(index)",
-                coordinate: MockRestaurantRepositoryImplementation.randomCoordinate(center: region.center))
+                coordinate: MockRestaurantRepositoryImplementation.randomCoordinate(center: region.center),
+                address: "MockAddress",
+                categoryName: "MockCategory",
+                caregoryIconURL: URL(string: "https://en.wikipedia.org/wiki/Bar#/media/File:Bar-P1030319.jpg"))
             mockRestaurants.append(mockRestaurant)
         }
         return mockRestaurants
@@ -47,7 +49,7 @@ class MockRestaurantRepositoryImplementation: RestaurantRepository {
     }
     
     private static func randomCoordinate() -> Double {
-        return Double(arc4random_uniform(140)) * 0.0001
+        return Double(arc4random_uniform(140)) * 0.0005
     }
 
 }

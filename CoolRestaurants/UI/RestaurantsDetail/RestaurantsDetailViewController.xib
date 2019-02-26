@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
@@ -7,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantsDetailViewController" customModule="target" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantsDetailViewController" customModule="CoolRestaurants" customModuleProvider="target">
             <connections>
+                <outlet property="addressLabel" destination="4Qs-fu-LtH" id="njx-hw-L06"/>
+                <outlet property="categoryImageView" destination="F2O-F6-mBd" id="cy2-kU-XrB"/>
+                <outlet property="categoryLabel" destination="E4y-3W-Bkv" id="Bws-b6-AQB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +23,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RestaurantsDetailView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-EV-07M">
-                    <rect key="frame" x="159" y="333" width="57" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F2O-F6-mBd">
+                    <rect key="frame" x="87.5" y="140.5" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="7y9-tu-HJH"/>
+                        <constraint firstAttribute="width" constant="200" id="CGP-7S-752"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4y-3W-Bkv">
+                    <rect key="frame" x="152" y="109.5" width="71" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-fu-LtH">
+                    <rect key="frame" x="156" y="390.5" width="63" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -26,10 +45,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Tut-EV-07M" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="BpK-32-f9f"/>
-                <constraint firstItem="Tut-EV-07M" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pBI-NW-95s"/>
+                <constraint firstItem="4Qs-fu-LtH" firstAttribute="top" secondItem="F2O-F6-mBd" secondAttribute="bottom" constant="50" id="FCo-sK-7bX"/>
+                <constraint firstItem="4Qs-fu-LtH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Kcl-SP-TDM"/>
+                <constraint firstItem="F2O-F6-mBd" firstAttribute="top" secondItem="E4y-3W-Bkv" secondAttribute="bottom" constant="10" id="RhN-Gf-iCj"/>
+                <constraint firstItem="E4y-3W-Bkv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Wtq-zz-2re"/>
+                <constraint firstItem="F2O-F6-mBd" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.7" id="YnL-Yw-wXZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Qs-fu-LtH" secondAttribute="trailing" constant="20" id="hFd-Lj-Kuh"/>
+                <constraint firstItem="F2O-F6-mBd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="k7R-az-c1i"/>
+                <constraint firstItem="4Qs-fu-LtH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="urM-Gq-dFh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="139.880059970015"/>
         </view>
     </objects>
 </document>

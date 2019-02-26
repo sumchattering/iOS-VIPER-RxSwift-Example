@@ -1,4 +1,5 @@
 PODS:
+  - FoursquareKit (1.0.0)
   - RxAtomic (4.4.1)
   - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
@@ -12,6 +13,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - FoursquareKit
   - RxSwift
   - SDWebImage
   - SwiftGen
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FoursquareKit
     - RxAtomic
     - RxSwift
     - SDWebImage
@@ -29,6 +32,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  FoursquareKit: d72b8634328d326cf962760c64a8ce5a6014f237
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: ba8ae872b517c10062251bc2f80772a1b0736672
+PODFILE CHECKSUM: c9ddb0785c5ee7dc6c8bb3889d3eb146fc0ae1b1
 
 COCOAPODS: 1.5.3

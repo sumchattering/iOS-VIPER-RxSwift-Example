@@ -48,8 +48,8 @@ extension RestaurantsMapViewController: RestaurantsMapView {
     func centreMapOnLocation(location: CLLocation) {
         self.mapView.region = MKCoordinateRegion(
             center: location.coordinate,
-            latitudinalMeters: 10000.0,
-            longitudinalMeters: 10000.0
+            latitudinalMeters: 1000.0,
+            longitudinalMeters: 1000.0
         )
     }
     
@@ -82,8 +82,10 @@ extension RestaurantsMapViewController: RestaurantsMapView {
             annotation.coordinate = restaurant.coordinate
             return annotation
         })
-        self.mapView.removeAnnotations(self.mapView.annotations)
-        self.mapView.addAnnotations(annotations)
+        DispatchQueue.main.async {
+            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.mapView.addAnnotations(annotations)
+        }
     }
 
 }
@@ -111,6 +113,7 @@ extension RestaurantsMapViewController: MKMapViewDelegate {
     }
     
     public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.mapView.reloadInputViews()
         self.restaurantsMapUserActionsListener?.mapViewDidChangeRegion(region: mapView.region)
     }
     

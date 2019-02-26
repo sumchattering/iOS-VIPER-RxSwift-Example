@@ -11,6 +11,7 @@
 		2D566AD02224E11700507912 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566ACF2224E11700507912 /* LocationRepository.swift */; };
 		2D566AD22224E19D00507912 /* LocationRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566AD12224E19D00507912 /* LocationRepositoryImplementation.swift */; };
 		2D566AD42224F5CC00507912 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566AD32224F5CC00507912 /* MKCoordinateRegion+Extensions.swift */; };
+		2D566AD622258FD400507912 /* MockLocationRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D566AD522258FD400507912 /* MockLocationRepositoryImplementation.swift */; };
 		2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3322242A440077AD51 /* AppDelegate.swift */; };
 		2D8C3B3B22242A450077AD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3A22242A450077AD51 /* Assets.xcassets */; };
 		2D8C3B3E22242A450077AD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C3B3C22242A450077AD51 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		2D566ACF2224E11700507912 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		2D566AD12224E19D00507912 /* LocationRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryImplementation.swift; sourceTree = "<group>"; };
 		2D566AD32224F5CC00507912 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
+		2D566AD522258FD400507912 /* MockLocationRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationRepositoryImplementation.swift; sourceTree = "<group>"; };
 		2D8C3B3022242A440077AD51 /* CoolRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8C3B3322242A440077AD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D8C3B3A22242A450077AD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8C3B98222435E70077AD51 /* MockRestaurantRepositoryImplementation.swift */,
+				2D566AD522258FD400507912 /* MockLocationRepositoryImplementation.swift */,
 			);
 			path = "Mock Implementations";
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoolRestaurants/Pods-CoolRestaurants-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FoursquareKit/FoursquareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -551,6 +555,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoursquareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -657,6 +662,7 @@
 				2D8C3B7B22242C350077AD51 /* RestaurantsDetailCoordinator.swift in Sources */,
 				2D8C3B8D22242DC30077AD51 /* Coordinator.swift in Sources */,
 				2D8C3B7A22242C350077AD51 /* RestaurantsDetailContracts.swift in Sources */,
+				2D566AD622258FD400507912 /* MockLocationRepositoryImplementation.swift in Sources */,
 				2D8C3BB4222444260077AD51 /* UIColor+Extensions.swift in Sources */,
 				2D8C3B9322242EEA0077AD51 /* AvoidingKeyboardConstraintProtocol.swift in Sources */,
 				2D8C3B3422242A440077AD51 /* AppDelegate.swift in Sources */,

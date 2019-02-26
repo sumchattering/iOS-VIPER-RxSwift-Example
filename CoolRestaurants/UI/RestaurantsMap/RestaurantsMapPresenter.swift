@@ -19,7 +19,7 @@ class RestaurantsMapPresenter: BasePresenter {
     private let disposeBag = DisposeBag()
     private var userCurrentLocation: CLLocation?
     
-    var currentRestaurantRegion: MKCoordinateRegion?
+    var restaurantRegion: MKCoordinateRegion?
 
     init(locationRepository: LocationRepository, restaurantRepository: RestaurantRepository, router: RestaurantsMapRouter) {
         self.locationRepository = locationRepository
@@ -68,17 +68,17 @@ class RestaurantsMapPresenter: BasePresenter {
 
     private func fetchRestaurants(region: MKCoordinateRegion) {
         guard userCurrentLocation != nil else { return }
-        if let currentRegion = self.currentRestaurantRegion, let intersectionRegion = currentRegion.intersectedWith(region) {
+        
+        if let restaurantRegion = self.restaurantRegion, restaurantRegion.contains(region.center) {
             return
         }
         
-        self.currentRestaurantRegion = region
+        self.restaurantRegion = region
         self.restaurantRepository.getRestaurants(region: region).subscribe(onSuccess: { [weak self] restaurants in
             self?.restaurantsMapView?.showRestaurants(restaurants: restaurants)
-            
         }, onError: { _ in
             // handle error
-            self.currentRestaurantRegion = nil
+            self.restaurantRegion = nil
         }).disposed(by: self.disposeBag)
     }
 }

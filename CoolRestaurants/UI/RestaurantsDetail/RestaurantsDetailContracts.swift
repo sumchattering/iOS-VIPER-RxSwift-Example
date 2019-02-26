@@ -9,6 +9,8 @@
 protocol RestaurantsDetailView: View {
     
     func showTitle(title: String)
+    
+    func showRestaurant(restaurant: Restaurant)
 }
 
 protocol RestaurantsDetailUserActionsListener: UserActionsListener { }

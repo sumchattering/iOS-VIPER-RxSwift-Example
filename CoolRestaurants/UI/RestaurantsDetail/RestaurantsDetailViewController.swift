@@ -8,9 +8,15 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class RestaurantsDetailViewController: BaseViewController {
-
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var categoryImageView: UIImageView!
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
     private var restaurantsDetailUserActionsListener: RestaurantsDetailUserActionsListener? {
         return userActionsListener as? RestaurantsDetailUserActionsListener
     }
@@ -23,6 +29,12 @@ class RestaurantsDetailViewController: BaseViewController {
 }
 
 extension RestaurantsDetailViewController: RestaurantsDetailView {
+    
+    func showRestaurant(restaurant: Restaurant) {
+        self.categoryLabel.text = restaurant.categoryName
+        self.addressLabel.text = restaurant.address
+        self.categoryImageView.sd_setImage(with: restaurant.caregoryIconURL, completed: nil)
+    }
 
     func showTitle(title: String) {
         self.title = title

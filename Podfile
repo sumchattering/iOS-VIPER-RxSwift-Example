@@ -11,6 +11,7 @@ target 'CoolRestaurants' do
   pod 'SwiftLint'
   pod 'SDWebImage'
   pod 'SwiftLocation'
+  pod 'FoursquareKit'
 
   target 'CoolRestaurantsTests' do
     inherit! :search_paths

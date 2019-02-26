@@ -23,6 +23,7 @@ class RestaurantsDetailPresenter: BasePresenter {
     override func initialize() {
         super.initialize()
         self.restaurantsDetailView?.showTitle(title: restaurant.name)
+        self.restaurantsDetailView?.showRestaurant(restaurant: restaurant)
     }
     
 }

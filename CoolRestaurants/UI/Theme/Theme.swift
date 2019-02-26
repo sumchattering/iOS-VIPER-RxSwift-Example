@@ -22,6 +22,6 @@ class Theme: ThemeProtocol {
     }
 
     static func theme(_ viewController: RestaurantsDetailViewController) {
-
+        viewController.categoryImageView.backgroundColor = .gray
     }
 }

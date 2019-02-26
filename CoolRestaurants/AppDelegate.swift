@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #if MOCK
         // Inject mock impmlementations
         RepositoryInjection.shared.restaurantRepositoy = MockRestaurantRepositoryImplementation.instance
+        RepositoryInjection.shared.locationRepository = MockLocationRepositoryImplementation.instance
 #endif
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
