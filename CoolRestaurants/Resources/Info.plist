@@ -43,5 +43,11 @@
     <string>We use your location for getting the cool resturants</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>We use your location for getting the cool resturants</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--For checking location-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

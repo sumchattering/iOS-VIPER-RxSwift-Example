@@ -13,6 +13,21 @@ import MapKit
 
 class LocationRepositoryImplementation: LocationRepository {
     
+    let locationManager = CLLocationManager()
+    
+    func requestLocationAuthorization() -> Single<CLAuthorizationStatus> {
+        return Single.create(subscribe: { [weak self] observer in
+            self?.locationManager.requestWhenInUseAuthorization()
+            _ = Locator.events.listen { newStatus in
+                if newStatus != .notDetermined {
+                    observer(.success(newStatus))
+                    Locator.events.removeAll()
+                }
+            }
+            return Disposables.create()
+        })
+    }
+    
     func getLocationAuthorizationStatus() -> Single<CLAuthorizationStatus> {
         return Single.just(CLLocationManager.authorizationStatus())
     }
@@ -22,11 +37,15 @@ class LocationRepositoryImplementation: LocationRepository {
             Locator.currentPosition(accuracy: .city, onSuccess: { location in
                 observer(.success(location))
             }, onFail: { error, lastLocation in
-                if let location = lastLocation {
+                Locator.currentPosition(usingIP: .petabyet, timeout: 3.0, onSuccess: { location in
                     observer(.success(location))
-                } else {
-                    observer(.error(error))
-                }
+                }, onFail: { error, lastLocation in
+                    if let location = lastLocation {
+                        observer(.success(location))
+                    } else {
+                        observer(.error(error))
+                    }
+                })
             })
             return Disposables.create()
         })

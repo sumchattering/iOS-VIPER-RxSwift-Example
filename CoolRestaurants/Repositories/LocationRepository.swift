@@ -12,6 +12,8 @@ import MapKit
 
 protocol LocationRepository {
     
+    func requestLocationAuthorization() -> Single<CLAuthorizationStatus>
+    
     func getLocationAuthorizationStatus() -> Single<CLAuthorizationStatus>
 
     func getCurrentLocation() -> Single<CLLocation>

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import MapKit
-import STLocationRequest
 
 class ResturantMapViewAnnotaion: MKPointAnnotation {
     let restaurant: Restaurant
@@ -37,8 +36,6 @@ class RestaurantsMapViewController: BaseViewController {
 
         self.setupMapView()
         self.title = Strings.App.Mainview.title
-        
-        self.navigationItem.rightBarButtonItem = MKUserTrackingBarButtonItem(mapView: self.mapView)
     }
 
     private func setupMapView() {
@@ -78,20 +75,6 @@ extension RestaurantsMapViewController: RestaurantsMapView {
         self.present(alert, animated: true)
     }
     
-    func requestLocationPermission() {
-        
-        let locationRequestController = STLocationRequestController { (config: inout STLocationRequestController.Configuration) in
-            config.title.text = Strings.App.Mainview.locationPermissionText
-            config.allowButton.title = Strings.App.Mainview.locationPermissionAccept
-            config.notNowButton.title = Strings.App.Mainview.locationPermissionReject
-            config.mapView.alpha = 0.9
-            config.backgroundColor = UIColor.lightGray
-            config.authorizeType = .requestWhenInUseAuthorization
-        }
-        
-        locationRequestController.present(onViewController: self)
-    }
-    
     func showRestaurants(restaurants: [Restaurant]) {
         let annotations = restaurants.map({ restaurant -> MKAnnotation in
             let annotation = ResturantMapViewAnnotaion(restaurant: restaurant)
@@ -103,17 +86,6 @@ extension RestaurantsMapViewController: RestaurantsMapView {
         self.mapView.addAnnotations(annotations)
     }
 
-    private func hasLocationPermission() -> Bool {
-        if CLLocationManager.locationServicesEnabled() {
-            switch CLLocationManager.authorizationStatus() {
-            case .notDetermined, .restricted, .denied:
-                return false
-            case .authorizedAlways, .authorizedWhenInUse:
-                return true
-            }
-        }
-        return false
-    }
 }
 
 extension RestaurantsMapViewController: MKMapViewDelegate {

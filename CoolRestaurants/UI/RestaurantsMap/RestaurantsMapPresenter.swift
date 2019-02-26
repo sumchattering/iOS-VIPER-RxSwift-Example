@@ -17,6 +17,7 @@ class RestaurantsMapPresenter: BasePresenter {
     private let locationRepository: LocationRepository
     private var restaurantsMapView: RestaurantsMapView? { return view as? RestaurantsMapView }
     private let disposeBag = DisposeBag()
+    private var userCurrentLocation: CLLocation?
     
     var currentRestaurantRegion: MKCoordinateRegion?
 
@@ -39,8 +40,8 @@ class RestaurantsMapPresenter: BasePresenter {
     private func checkLocationPermission() {
         self.locationRepository.getLocationAuthorizationStatus().subscribe(onSuccess: { [weak self] status in
             switch status {
-            case .notDetermined: self?.restaurantsMapView?.requestLocationPermission()
-            case .authorizedAlways, .authorizedWhenInUse: self?.centreMapOnCurrentLocation()
+            case .notDetermined: self?.requestLocationPermission()
+            case .authorizedAlways, .authorizedWhenInUse: self?.onLocationPermissionSuccess()
             case .denied, .restricted: self?.restaurantsMapView?.showLocationNeededAlert()
             }
         }, onError: { [weak self] error in
@@ -48,8 +49,17 @@ class RestaurantsMapPresenter: BasePresenter {
         }).disposed(by: self.disposeBag)
     }
     
-    func centreMapOnCurrentLocation() {
+    func requestLocationPermission() {
+        self.locationRepository.requestLocationAuthorization().subscribe(onSuccess: { [weak self] _ in
+            self?.checkLocationPermission()
+            }, onError: { [weak self] _ in
+                self?.restaurantsMapView?.showLocationErrorAlert()
+        }).disposed(by: self.disposeBag)
+    }
+    
+    func onLocationPermissionSuccess() {
         self.locationRepository.getCurrentLocation().subscribe(onSuccess: { [weak self] location in
+            self?.userCurrentLocation = location
             self?.restaurantsMapView?.centreMapOnLocation(location: location)
         }, onError: { [weak self] _ in
             self?.restaurantsMapView?.showLocationErrorAlert()
@@ -57,6 +67,7 @@ class RestaurantsMapPresenter: BasePresenter {
     }
 
     private func fetchRestaurants(region: MKCoordinateRegion) {
+        guard userCurrentLocation != nil else { return }
         if let currentRegion = self.currentRestaurantRegion, let intersectionRegion = currentRegion.intersectedWith(region) {
             return
         }

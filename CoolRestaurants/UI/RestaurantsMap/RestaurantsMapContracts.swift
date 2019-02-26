@@ -13,9 +13,7 @@ protocol RestaurantsMapView: View {
     func showRestaurants(restaurants: [Restaurant])
     
     func centreMapOnLocation(location: CLLocation)
-    
-    func requestLocationPermission()
-    
+        
     func showLocationNeededAlert()
     
     func showLocationErrorAlert()

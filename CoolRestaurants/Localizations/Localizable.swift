@@ -24,7 +24,7 @@ internal enum Strings {
       internal static let locationPermissionAlertTitle = Strings.tr("Localizable", "app.mainview.locationPermissionAlertTitle")
       /// OK
       internal static let locationPermissionErrorOKButton = Strings.tr("Localizable", "app.mainview.locationPermissionErrorOKButton")
-      /// \nThere was a problem getting your location. Please try later\n\n
+      /// \nThere was a problem getting your location\n\n
       internal static let locationPermissionErrorText = Strings.tr("Localizable", "app.mainview.locationPermissionErrorText")
       /// Location Error
       internal static let locationPermissionErrorTitle = Strings.tr("Localizable", "app.mainview.locationPermissionErrorTitle")
